@@ -68,12 +68,38 @@
 #     if num > 4:
 #       print(num*2)
 
-def get_max(numbers):
-    max_number = numbers[0]
-    for num in numbers:
-         if num > max_number:
-             max_number = num
+# def get_max(numbers):
+#     max_number = numbers[0]
+#     for num in numbers:
+#          if num > max_number:
+#              max_number = num
+#
+#     return max(numbers)
+#
+# print(get_max([12, 9, 2, 9, 589, 1009]))
 
-    return max(numbers)
+# numbers = []
+# total = 0
+# while True:
+#     value = input("Enter a numbers:")
+#     if value == "stop":
+#         break
+#     number = int(value)
+#     numbers.append(number)
+#
+# min_num = numbers[0]
+# max_num = numbers[0]
+# for num in numbers:
+#         total += num
+#         if num > max_num:
+#             max_num = num
+#
+#         if num < min_num:
+#            min_num = num
+# print(numbers)
+# print(total)
+# print(min_num)
+# print(max_num)
 
-print(get_max([12, 9, 2, 9, 589, 1009]))
+print(divmod(-10, 7))
+print(divmod(-33, 9))
