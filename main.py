@@ -100,6 +100,82 @@
 # print(total)
 # print(min_num)
 # print(max_num)
+# name = input("Enter your name: ")
+# age = int(input("Enter your age: "))
+# city = input("Enter your city: ")
+# user = {
+#     "name": name,
+#     "age": age,
+#     "city": city
+# }
+# for key, value in user.items():
+#     print(key, value)
 
-print(divmod(-10, 7))
-print(divmod(-33, 9))
+# number = float(input("Enter a number: "))
+# res = number.is_integer()
+# x = bin(int(number))
+# a = hex(int(number))
+# b = oct(int(number))
+# rounded = round(number, 2)
+#
+# print("Is integer: ", res)
+# print("Binary: ", x)
+# print("Hex: ", a)
+# print("Oct: ", b)
+# print("Rounded: ", rounded)
+# print("Ratio: ", number.as_integer_ratio())
+
+# numbers = list(map(int, input("Enter a numbers: ").split(",")))
+# max_number = numbers[0]
+# max_index = 0
+# for i in range(len(numbers)):
+#     if numbers[i] > max_number:
+#         max_number = numbers[i]
+#         max_index = i
+# print(max_number)
+# print(max_index)
+
+# number = int(input("Enter number: "))
+#
+# original = number
+#
+# # 1. Збираємо всі парні цифри у перевернутому порядку
+# even_digits = 0
+#
+# temp = number
+# while temp > 0:
+#     temp, digit = divmod(temp, 10)
+#
+#     if digit % 2 == 0:
+#         even_digits = even_digits * 10 + digit
+#
+# # 2. Збираємо нове число, замінюючи парні цифри
+# new_number_reversed = 0
+#
+# temp = original
+# while temp > 0:
+#     temp, digit = divmod(temp, 10)
+#
+#     if digit % 2 == 0:
+#         new_digit = even_digits % 10
+#         even_digits //= 10
+#     else:
+#         new_digit = digit
+#
+#     new_number_reversed = new_number_reversed * 10 + new_digit
+#
+# # 3. Перевертаємо назад, бо збирали справа наліво
+# result = 0
+#
+# while new_number_reversed > 0:
+#     new_number_reversed, digit = divmod(new_number_reversed, 10)
+#     result = result * 10 + digit
+#print(result)
+
+
+
+
+
+
+
+
