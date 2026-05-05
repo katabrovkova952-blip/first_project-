@@ -170,7 +170,43 @@
 # while new_number_reversed > 0:
 #     new_number_reversed, digit = divmod(new_number_reversed, 10)
 #     result = result * 10 + digit
-#print(result)
+# print(result)
+
+# num = [1, 2, 3, 4, 5, 6]
+# num = [1, 2, 3, 4, 5]
+# num = [1]
+# num = []
+# y = (len(num) + 1) // 2
+# print([num[:y]] + [num[y:]])
+#
+# text = input("Enter a text:")
+# retr = text[::-1]
+# num = []
+# for i in retr:
+#     if i not in num:
+#         num.append(i)
+# print("".join(num))
+
+# lst_1 = [10, 1, 10]
+# max_value = max(lst_1)
+# new_lst = []
+# for num in lst_1:
+#     if num < max_value:
+#         new_lst.append(num)
+#
+# if new_lst:
+#     max_value_two = max(new_lst)
+#     print(max_value_two)
+# else:
+#     print("Don`t have second max")
+
+# text = input("Enter your text: ").lower()
+# vowels = "aeiou"
+# count = 0
+# for letter in text:
+#     if letter in vowels:
+#         count +=1
+# print(count)
 
 
 
