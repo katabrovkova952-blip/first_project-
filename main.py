@@ -2,6 +2,7 @@
 #     print("Hello")
 # click()
 
+
 # def add(c, f):
 #     return c % f
 # print(add(10,5))
@@ -198,7 +199,7 @@
 #     max_value_two = max(new_lst)
 #     print(max_value_two)
 # else:
-#     print("Don`t have second max")
+#     print("Do not have second max")
 
 # text = input("Enter your text: ").lower()
 # vowels = "aeiou"
@@ -208,10 +209,79 @@
 #         count +=1
 # print(count)
 
+# i = 1
+# while i <= 5:
+#     j = 5
+#     for j in range(i):
+#         print(i, end='')
+#         j -= 1
+#     print()
+#     i += 1
+#
+#
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+# new_lst = []
+# for num in numbers:
+#     if num % 2 == 0:
+#         new_lst.append(num * 2)
+#     else:
+#         new_lst.append(num * 3)
+# print(new_lst)
+#
+# new_lst = [num * 2 if num % 2 == 0 else num * 3 for num in numbers]
+# print(new_lst)
 
+# numbers = [2, 4, 6, 8, 10, 12, 14, 16]
+# new_lst = []
+#
+# for i, num in enumerate(numbers[2:7], start=2)
+#     if i % 2 == 0:
+#         new_lst.append(num * 2)
+#     else:
+#         new_lst.append(num * 3)
+#
+# print(new_lst)
 
+# numbers = [3, 7, 10, 15, 22, 8]
+# lst = [n for n in numbers if n % 2 == 0]
+# print(lst)
 
+import random
+# number_comp = random.randint(1,10)
+# while True:
+#     number_people = int(input("enter the number:"))
+#     if number_people > number_comp:
+#         print("Too high")
+#     elif number_people < number_comp:
+#         print("Too low")
+#     else:
+#         print("You win")
+#         break
 
+# player_wins = 0
+# computer_wins = 0
+# while True:
+#     user = input("Enter rock, paper or scissors: ")
+#     computer = random.choice(["rock", "paper", "scissors"])
+#     if user == "exit":
+#         print("Exiting")
+#         break
+#     if user not in ("rock", "paper", "scissors"):
+#         print("Invalid choice")
+#         continue
+#     print(f"Computer chose: {computer}")
+#     if user == computer:
+#         print("Draw")
+#     elif ((user == "rock" and computer == "scissors") or
+#           (user == "paper" and computer == "rock") or
+#           (user == "scissors" and computer == "paper")):
+#         player_wins += 1
+#         print("Player wins!")
+#     else:
+#         computer_wins += 1
+#         print("Computer wins!")
+# print(f"Player wins: {player_wins}")
+# print(f"Computer wins: {computer_wins}")
 
 
 
