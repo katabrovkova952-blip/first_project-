@@ -242,10 +242,6 @@
 #
 # print(new_lst)
 
-# numbers = [3, 7, 10, 15, 22, 8]
-# lst = [n for n in numbers if n % 2 == 0]
-# print(lst)
-
 import random
 # number_comp = random.randint(1,10)
 # while True:
@@ -283,5 +279,89 @@ import random
 # print(f"Player wins: {player_wins}")
 # print(f"Computer wins: {computer_wins}")
 
-
+# balance = 1000
+# while True:
+#     print( """1. Check balance
+# 2. Deposit money
+# 3. Withdraw money
+# 4. Exit""".strip())
+#     choice = int(input("Enter your choice: "))
+#     if choice == 1:
+#         print(f"Your balance is: {balance}")
+#     elif choice == 2:
+#         money = int(input("Enter amount: "))
+#         if money <= 0:
+#             print("Invalid amount")
+#             continue
+#         balance += money
+#         print(f"Your balance is: {balance}")
+#     elif choice == 3:
+#         money = int(input("Enter amount: "))
+#         if money <= 0:
+#             print("Invalid amount")
+#             continue
+#         if money <= balance:
+#             balance -= money
+#             print(f"your balance is: {balance}")
+#         else:
+#             print("Not enough money")
+#     elif choice == 4:
+#         print("Goodbye!")
+#         break
+#     else:
+#         print("Invalid choice")
+# import string
+# tasks = ["Buy milk", "Learn Python", "Go gym"]
+# while True:
+#     print("""1. Show tasks
+# 2. Add task
+# 3. Delete task
+# 4. Exit""".strip())
+#     choice = input("Enter your choice: ").strip()
+#     if not choice:
+#         print("Invalid choice")
+#         continue
+#     if not choice.isdigit():
+#         print("Choice must be digits")
+#         continue
+#     choice = int(choice)
+#     if choice == 1:
+#         if not tasks:
+#             print("No tasks")
+#         else:
+#             for i, enter in enumerate(tasks, start=1):
+#                 print(f"{i}. {enter}")
+#     elif choice == 2:
+#         enter = input("Enter task: ").strip()
+#         tasks.append(enter)
+#         print("Task added")
+#     elif choice == 3:
+#         if not tasks:
+#             print("No tasks to delete")
+#             continue
+#         for i, enter in enumerate(tasks, start=1):
+#             print(f"{i}. {enter}")
+#         number = input("Enter task number: ").strip()
+#         if not number or not number.isdigit():
+#             print("Invalid number")
+#             continue
+#         number = int(number)
+#         if number < 1 or number > len(tasks):
+#             print("Invalid number")
+#             continue
+#         delete_task = tasks.pop(number - 1)
+#         print(f"Deleted task: {delete_task}")
+#
+#     elif choice == 4:
+#         print("Goodbye!")
+#         break
+#     else:
+#         print("Invalid choice")
+# import string
+# text = input("Enter a string: ").title()
+# result = "#"
+# for i in text:
+#     if i not in string.punctuation and i != " ":
+#         result += i
+# print(result)
 
