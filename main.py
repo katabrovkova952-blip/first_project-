@@ -24,19 +24,6 @@
 # print(type(p))
 # print(isinstance(p, int)
 
-# res = []
-# mountain = [
-#     [7],
-#     [5, 8],
-#     [9, 8, 2],
-#     [1, 3, 5, 6],
-#     [6, 2, 4, 4, 5],
-#     [9, 5, 3, 5, 5, 7],
-#     [7, 4, 6, 4, 7, 6, 8]]
-# def can_go(i):
-#     max_res = sum(max(i))
-#     return i
-
 # animals = [
 #     {"name": "cat", "type": "pet", "legs": 4},
 #     {"name": "dog", "type": "pet", "legs": 4},
@@ -57,12 +44,43 @@
 #
 # print(filter_animals(animals, legs=4))
 
-def draw_rectangle(w, h, fill):
-    for i in range(w):
-        for j in range(h):
-            print(fill, end="")
-        print()
-    return
+# def draw_rectangle(w, h, fill):
+#     for i in range(w):
+#         for j in range(h):
+#             print(fill, end="")
+#         print()
+#     return
+#
+# dct = {"fill": "#", "w": 5, "h": 8, 'j': 234}
+# draw_rectangle(**dct)
 
-dct = {"fill": "#", "w": 5, "h": 8, 'j': 234}
-draw_rectangle(**dct)
+# def find_gcd(a, b):
+#     while b != 0:
+#         a, b = b, a % b
+#     return a
+# print(find_gcd(45, 30))
+
+# import math
+# def calculate_circle_area(radius):
+#     s = math.pi * radius**2
+#     res = round(s, 2)
+#     return res
+# print(calculate_circle_area(10))
+
+# def can_go(*args):
+#     next_step = 0
+#     for i in args:
+#         for j in i:
+#             next_step += j[0] or j[+1]
+#     return next_step
+#
+# print(can_go([
+#     [7],
+#     [5, 8],
+#     [9, 8, 2],
+#     [1, 3, 5, 6],
+#     [6, 2, 4, 4, 5],
+#     [9, 5, 3, 5, 5, 7],
+#     [7, 4, 6, 4, 7, 6, 8]]))
+
+

@@ -1,21 +1,19 @@
 import string
 import keyword
 text = input("Enter a text: ")
+punkt = string.punctuation.replace('_', ' ')
+
 result = True
+
 if text[0] in string.digits:
     result = False
 elif text in keyword.kwlist:
     result = False
-elif "__" in text:
+elif any(i in punkt for i in text):
     result = False
-else:
-    for i in text:
-        if i == "_":
-            continue
-        elif i in string.ascii_uppercase:
-            result = False
-            break
-        elif i in string.punctuation or i == " ":
-            result = False
-            break
+elif any(i.isupper() for i in text):
+    result = False
+elif text.count("_") != 1 and text.count("_") == len(text):
+    result = False
 print(result)
+
