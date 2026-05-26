@@ -60,12 +60,6 @@
 #     return a
 # print(find_gcd(45, 30))
 
-# import math
-# def calculate_circle_area(radius):
-#     s = math.pi * radius**2
-#     res = round(s, 2)
-#     return res
-# print(calculate_circle_area(10))
 
 # def can_go(*args):
 #     next_step = 0
@@ -82,5 +76,4 @@
 #     [6, 2, 4, 4, 5],
 #     [9, 5, 3, 5, 5, 7],
 #     [7, 4, 6, 4, 7, 6, 8]]))
-
 
