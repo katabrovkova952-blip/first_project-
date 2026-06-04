@@ -60,20 +60,122 @@
 #     return a
 # print(find_gcd(45, 30))
 
-
-# def can_go(*args):
-#     next_step = 0
-#     for i in args:
-#         for j in i:
-#             next_step += j[0] or j[+1]
-#     return next_step
+# def add_decorator(number):
+#     """
+#     Реалізує декоратор, який змінює поведінку функції, додаючи до результату функції число.
 #
-# print(can_go([
-#     [7],
-#     [5, 8],
-#     [9, 8, 2],
-#     [1, 3, 5, 6],
-#     [6, 2, 4, 4, 5],
-#     [9, 5, 3, 5, 5, 7],
-#     [7, 4, 6, 4, 7, 6, 8]]))
+#     :param number: Число для додавання.
+#     :return: Декоратор для додавання числа до результату функції.
+#     """
+#     def decorator(func):
+#        def wrapper(*args, **kwargs):
+#            res = func(*args, **kwargs)
+#            return res + number
+#        return wrapper
+#     return decorator
+#
+# @add_decorator(5)
+# def example_function(x):
+#     return x * 2
+#
+# @add_decorator(7)
+# def summer(x):
+#     return x + 10
+#
+# # Перевірка
+# print(example_function(2))
+# print(summer(5))
+# assert example_function(2) == 9
+
+
+# def repeat_decorator(repeat_count):
+#     def counter(func):
+#         def wrapper(*args, **kwargs):
+#             for i in range(repeat_count):
+#                 func(*args, **kwargs)
+#         return wrapper
+#     return counter
+#
+# @repeat_decorator(3)
+# def example_function():
+#     print("Function called")
+#
+# @repeat_decorator(5)
+# def sumar(x, y):
+#     print(x + y)
+#
+# example_function()
+# sumar(1, 2)
+#
+#
+# workers = {}
+#
+# def link(address=None):
+#     def add_worker(func):
+#         workers[address] = func
+#         def get_answer(*args, **kwargs):
+#             return str(func(*args, **kwargs))
+#         return get_answer
+#     return add_worker
+#
+# @link("\\main")
+# def main_page():
+#     return "Hello word page"
+#
+# @link("\\main\\goods")
+# def get_goods(list_goods):
+#     return list_goods
+#
+# print(workers)
+
+
+# def cache(func):
+#     dct = {}
+#     def wrapper(*number, **kwargs):
+#         key = (number, tuple(kwargs.items()))
+#         if key in dct:
+#             return dct[key]
+#         else:
+#             res = func(*number, **kwargs)
+#             dct[key] = res
+#             return res
+#     return wrapper
+#
+# @lru_cache
+# def square(x, y):
+#     print("Обчислюю...")
+#     return (x + y) ** 2
+#
+# print(square(5, y= 3))
+# print(square(5, y= 2))
+
+# def retry(x):
+#     def deco(func):
+#         def wrapper():
+#             for i in range(1, x + 1):
+#                 try:
+#                     return func()
+#                 except ValueError:
+#                     print(f"Спроба {i}")
+#
+#             print("Усі спроби вичерпано")
+#         return wrapper
+#     return deco
+#
+#
+# @retry(3)
+# def test():
+#     raise ValueError
+# test()
+
+# def create_dictionary(*args):
+#     dct = {}
+#     for index, i in enumerate(args):
+#         if not isinstance(i, (list, dict, set)):
+#             dct[i] = index
+#         else:
+#             print(f"Cannot add {i} to the dict!")
+#     return dct
+# print(create_dictionary("rt", 23, 34.5, {}, [], 23))
+
 
