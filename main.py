@@ -178,4 +178,73 @@
 #     return dct
 # print(create_dictionary("rt", 23, 34.5, {}, [], 23))
 
+# def binary_search(arr, target):
+#     left = 0
+#     right = len(arr) - 1
+#     while left <= right:
+#         middle = (left + right) // 2
+#         value = arr[middle]
+#         if value == target:
+#             return middle
+#         elif value < target:
+#             left = middle + 1
+#         else:
+#             right = middle - 1
+#     return -1
+#
+# assert binary_search([11, 12, 22, 25, 34, 64, 90, 100, 130, 140 ,200], 1320) == -1
 
+class Phone:
+    def __init__(self, brand, model, price):
+        self.brand = brand
+        self.price = price
+        self.model = model
+
+    def __str__(self):
+        return f'Phone {self.brand} {self.model} {self.price}'
+
+phone1 = Phone("Samsung", "A52", 7000)
+phone2 = Phone("Samsung", "S11", 37000)
+phone3 = Phone("Samsung", "A12", 4000)
+phone4 = Phone("Xiaomi", "Redmi Note 11 ", 8700)
+phone5 = Phone("Xiaomi", "12 Lite", 17000)
+
+class Warehouse:
+
+    def __init__(self, address):
+        self.address = address
+        self.storage = {}
+
+    def add_to_storage(self, item, value):
+        """ Метод додавання товару на склад """
+        self.storage[item] = value
+
+    def remove_from_storage(self, item):
+        """ Метод видалення товару зі складу """
+        value = self.storage.pop(item, None)
+        return value
+
+    def get_item_value(self, item):
+        """ Метод отримання кількості товару на складі """
+        return self.storage.get(item)
+
+    def get_total_value(self):
+        """ Метод отримання загальної вартості товару на складі """
+        total = 0
+        for key, cnt in self.storage.items():
+            total += key.price * cnt
+        return total
+
+    def __str__(self):
+        """ Метод виведення інформації про склад """
+        tmp = ''
+        for item, cnt in self.storage.items():
+            tmp += f'{str(item)}: {cnt} pcs. \n'
+        return f'Warehouse at {self.address} contains:\n{tmp} '
+
+wh = Warehouse("Kyiv, vul. Viskozna, 135")
+print(wh.get_total_value())
+wh.add_to_storage(phone1, 40)
+wh.add_to_storage(phone2, 23)
+print(wh.get_total_value())
+print(wh.get_item_value(phone2))
