@@ -18,6 +18,13 @@ class Student(Human):
     def __str__(self):
         return f"Student: {self.first_name} {self.last_name} has {self.record_book} record book."
 
+    def __eq__(self, other):
+        return str(self) == str(other)
+
+    def __hash__(self):
+        return hash(str(self))
+
+
 class GroupError(Exception):
     pass
 
@@ -91,3 +98,4 @@ gr.delete_student('Taylor')
 print(gr)  # Only one student
 
 gr.delete_student('Taylor')  # No error!
+assert gr.find_student('Jobs') == st1

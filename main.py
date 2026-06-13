@@ -168,7 +168,7 @@
 #     left = 0
 #     right = len(arr) - 1
 #     while left <= right:
-#         middle = (left + right) // 2
+#         middle = (left + right) // 2index = int(input("Input index "))
 #         value = arr[middle]
 #         if value == target:
 #             return middle
@@ -179,3 +179,4 @@
 #     return -1
 #
 # assert binary_search([11, 12, 22, 25, 34, 64, 90, 100, 130, 140 ,200], 1320) == -1
+
