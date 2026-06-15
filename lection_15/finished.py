@@ -1,5 +1,5 @@
-from student import Student
-from group import Group
+from lection_15.student import Student
+from lection_15.group import Group
 
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
