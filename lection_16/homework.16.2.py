@@ -3,26 +3,41 @@ class Fraction:
         self.a = a
         self.b = b
 
+    def _cross(self, other):
+        return self.a * other.b, other.a * self.b
+
     def __mul__(self, other):
-        return Fraction(self.a * other.a, self.b * other.b)
+        if isinstance(other, Fraction):
+            return Fraction(self.a * other.a, self.b * other.b)
+        return NotImplemented
 
     def __add__(self, other):
-        return Fraction(self.a * other.b + self.b * other.a, self.b * other.b)
+        if isinstance(other, Fraction):
+            return Fraction(self.a * other.b + self.b * other.a, self.b * other.b)
+        return NotImplemented
 
     def __sub__(self, other):
-        return Fraction(self.a * other.b - self.b * other.a, self.b * other.b)
+        if isinstance(other, Fraction):
+            return Fraction(self.a * other.b - self.b * other.a, self.b * other.b)
+        return NotImplemented
 
     def __eq__(self, other):
-        return self.a * other.b == other.a * self.b
-
-    def __ne__(self, other):
-        return not self == other
+        if isinstance(other, Fraction):
+            left, right = self._cross(other)
+            return left == right
+        return NotImplemented
 
     def __gt__(self, other):
-        return self.a * other.b > other.a * self.b
+        if isinstance(other, Fraction):
+            left, right = self._cross(other)
+            return left > right
+        return NotImplemented
 
     def __lt__(self, other):
-        return self.a * other.b < other.a * self.b
+        if isinstance(other, Fraction):
+            left, right = self._cross(other)
+            return left < right
+        return NotImplemented
 
     def __str__(self):
         return f"Fraction: {self.a}, {self.b}"
