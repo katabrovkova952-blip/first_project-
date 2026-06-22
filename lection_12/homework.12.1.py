@@ -1,4 +1,4 @@
-def prime_generator(end):
+def prime_generator(end: int):
     for num in range(2, end + 1):
         is_prime = True
         for i in range(2, num):
