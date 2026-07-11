@@ -107,4 +107,3 @@
 #
 # print(user.name)
 # user.name = "Lora"
-
